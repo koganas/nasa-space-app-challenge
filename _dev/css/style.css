@@ -21,20 +21,5 @@
 @import 'components/_footer.css';
 
 /* OBJECTS - Generic */
-@import 'objects/_title.css';
-@import 'objects/_article.css';
-@import 'objects/_list.css';
-@import 'objects/_card.css';
-@import 'objects/_button.css';
-@import 'objects/_modal.css';
-@import 'objects/_aside.css';
-@import 'objects/_social.css';
-@import 'objects/_carousel.css';
-@import 'objects/_lang.css';
-@import 'objects/_form.css';
-@import 'objects/media/_audio.css';
-@import 'objects/media/_videoPlayer.css';
-
-/* OBJECTS - Custom */
-@import 'objects/_expert.css';
-@import 'objects/_lib.css';
+@import 'objects/_poll.css';
+@import 'objects/_waves.css';

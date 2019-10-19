@@ -6,6 +6,7 @@ const path             = require('path')
 const config           = require('./gulp.config')
 const banner           = require('./css.banner')
 
+const env              = require('minimist')(process.argv.slice(2))
 const gulp             = require('gulp')
 const gulpFn           = require('gulp-fn')
 const babel            = require('gulp-babel')
@@ -24,6 +25,8 @@ const UglifyJsPlugin   = require('uglifyjs-webpack-plugin')
 const nunjucks         = require('gulp-nunjucks-render')
 const autoprefixer     = require('autoprefixer')
 const cssfor           = require('postcss-for')
+const minifyHtml       = require('gulp-minify-html')
+const gulpif           = require('gulp-if')
 const processors       = [preCSS(), cssPresetEnv(), rucksack(), customSelector(), customProperties(), cssnano(), autoprefixer()]
 
 function handleError(err) {
@@ -32,7 +35,7 @@ function handleError(err) {
 }
 
 function cssBanner(file) {
-  console.info('..appending theme banner..')
+  console.info('appending banner')
 
   let minifiedCss = fs.readFileSync(file, 'utf8').toString(),
   stream = fs.createWriteStream(file)
@@ -42,8 +45,19 @@ function cssBanner(file) {
     stream.end()
   })
 
-  console.info('::theme banner appended successfully::')
+  console.info('::banner appended successfully::')
 }
+
+// Task nunjucks
+gulp.task('nunjucks', function(){
+    return gulp.src('src/**/*.html')
+        .pipe(plumber())
+        .pipe(nunjucks({
+            searchPaths: ['src']
+        }))
+        .pipe(gulpif(env.p, minifyHtml()))
+        .pipe(gulp.dest(`${config.dist.template}`));
+});
 
 // Task styles
 gulp.task('styles', () => {
@@ -108,6 +122,7 @@ gulp.task('default', () => {
     port: config.connect.port,
     host: config.connect.host
   })
+  gulp.watch(`${config.dev.template}/**/*.html`, ['nunjucks'])
   gulp.watch(`${config.dev.css}/**/*.css`, ['styles'])
   gulp.watch(`${config.dev.js.main}/**/*.js`, ['scripts'])
 })

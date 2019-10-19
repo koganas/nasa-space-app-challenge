@@ -1,0 +1,48 @@
+/* Colors */
+
+$white: #fff;
+$black: #000;
+$blackLight: #242424;
+
+$greyDark: #333;
+$grey: #3b3b3b;
+
+$orange: #ff613b;
+
+$blue: #14a1db;
+$blueLight: #46c2f5;
+$blueNeutral: #518cab;
+$blueDark: #2e4b75;
+
+$greyBase: #595959;
+$greySection: #f6f6f6; 
+$greyIce: #dcdcdc;
+$greyLight: #a1adb6;
+$greyMidLight: #bcc5cd;
+$greyUltraLight: #f1f1f1;
+
+$greyMenuBg: #f7f7f7;
+$greyInput: #f7f7f7;
+$greyMenuFont: #7f7f7f;
+
+$greyBorderHead: #c1c9cf;
+$greyBorder: #979797;
+
+/* $blueFacebook: #3B5998; */
+$blueFacebook: #4267b2;
+$blueLinkedin: #0077B5;
+
+$green: #47bf90;
+$greenDark: #0bb371;
+
+$pink: #f7748e;
+$pinkDark: #ea5270;
+
+$yellow: #f6c16b;
+$yellowDark: #f1b14a;
+
+$redDark: #c53d3d;
+
+/* Hover Colors */
+$aColor: #5e686d;
+$aColorHover: #b7b7b7;

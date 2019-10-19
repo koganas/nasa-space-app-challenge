@@ -1,0 +1,87 @@
+/* Articles links */
+&__link {
+
+	.article {
+    	width: 100%;
+		min-height: 100%;
+		display: inline-flex;
+		flex-direction: column;
+
+		&__head {
+			box-shadow: 0 2px 0 -1px $black;
+			margin: 0 auto;
+			flex: 1;
+			display: inline-flex;
+			flex-direction: column;
+		}
+
+		&__thumb {
+			flex-basis: 0;
+			flex-grow: 1;
+			flex-shrink: 1;
+
+			& + .article__head {
+				margin-top: -2.5rem;
+
+				.signature {
+					margin-top: auto;
+				}
+
+				&--lg {
+					margin-top: -6rem;
+				}
+				&--md {
+					margin-top: -5rem;	
+				}
+				@media (--md) {
+					&--md, &--lg {
+						margin-top: -2.5rem;
+					}
+				}
+			}
+
+		}
+
+		&--post {
+			padding: 0;
+			margin-bottom: 1rem;
+			.article__head {
+				padding: $spacement 0 6rem;
+				width: 90%;
+			}
+		}
+
+		&--news {
+			padding: 0;
+			margin-bottom: $spacement;
+			.kicker {
+				display: block;
+				margin: 16px 0 12px;
+			}
+		}
+
+	}
+
+	&:last-child {
+
+		.article {
+			&--post {
+				margin-bottom: 0;
+			}
+			&--news {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+	&:hover {
+		.article {
+			img {
+				filter: brightness(1.1);
+				//transform: translateY(-20px);
+			}
+		}
+	}
+
+}

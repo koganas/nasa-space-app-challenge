@@ -1,0 +1,88 @@
+.article {
+	/* General header */
+	padding: $spacement;
+	transition: all $cubic $animTime;
+
+	&__thumb {
+		min-width: 100%;
+		height: auto;
+		transition: all $cubic $animTime;
+	}
+
+	&__head {
+		background-color: $white;
+		position: relative;
+		padding: $spacement 1rem;
+		text-align: center;
+		width: 84%;
+		&--lg {
+			padding: $spacement $spacement;
+		}
+		.kicker {
+			margin-bottom: 1rem;
+		}
+		.excerpt-sans {
+			margin-top: 1.6rem;
+		}
+		.signature {
+			padding-top: $spacement;
+		}
+	}
+
+	/* General article */
+	&__hero {
+		padding: 0;
+	}
+
+	&__contact {
+		margin-top: 5rem;
+		font-style: italic;
+	}
+
+	&__footer {
+		.kicker {
+			margin-top: 5rem;
+		}
+	}
+
+	&__keywords {
+		font-family: $titlingNarrow;
+		font-weight: 300;
+		font-size: $s18;
+		font-range: $fontRange;
+		line-height: 1.4;
+		a {
+			color: $blackLight;
+			&:hover { color: $orange; }
+		}
+	}
+
+	&__info {
+		padding-bottom: 0.5rem;
+		margin-bottom: 4rem;
+		border-bottom: solid 2px $black;
+		position: relative;
+		.article {
+			@import '../objects/article/_collection.css';	
+			@import '../objects/article/_features.css';
+		}
+		+ .article {
+			@import '../objects/article/_lang.css';	
+		}
+	}
+
+	/* do NOT change the order of this imports */
+
+	/* WP Block Library */
+	@import '../objects/article/_block-library.css';
+
+	/* Only for single */
+	@import '../objects/article/_author.css';
+	@import '../objects/article/_content.css';
+	
+	/* Article types (post, page, archive, author, etc) */	
+	@import '../objects/article/_types.css';
+	
+	/* Articles links */
+	@import '../objects/article/_link.css';
+}

@@ -1,0 +1,153 @@
+/* Grid */
+$totalColumns: 24;
+$col: calc(100 / $totalColumns)%;
+$spacement: 2rem;
+
+.container {
+	max-width: $maxWidth;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+	&--full:not(img) {
+		width: 100%;
+	}
+	&--fullscreen {
+		max-width: 100%;
+		width: 100%;
+	}
+	&--head, &--head-pd {
+		padding-top: 12rem;
+		@media (--md) {
+			padding-top: 5rem;
+		}
+	}
+	&--head, &--mg {
+		margin-bottom: 6rem;
+	}
+	&--start {
+		justify-content: flex-start;
+	}
+
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: stretch;
+    width: 100%;
+    flex-basis: 100%;
+
+    &-justify {
+    	justify-content: space-between;
+    }
+
+	@for $i from 1 to $totalColumns {
+		$width: calc( $col * $(i) );
+	    .col-$i {
+	    	flex-basis: $width;
+	    	width: $width;
+	    }
+	    .col-offset-$i {
+	    	margin-left: $width;
+	    }
+	}
+
+	.col {
+		&-max {
+			max-width: 580px;
+			margin: auto;
+		}
+		&-center {
+			margin: auto;
+		}
+	}
+
+	.pd {
+		& > * {
+			padding: 0 calc( $spacement / 2 );
+		}
+	}
+
+	.pdt { padding-top: $spacement; }
+	.pdb { padding-bottom: $spacement; }
+	.pdr { padding-right: $spacement; }
+	.pdl { padding-left: $spacement; }
+	.mgt { margin-top: $spacement; }
+	.mgb { margin-bottom: $spacement; }
+	.mgr { margin-right: $spacement; }
+	.mgl { margin-left: $spacement; }
+	
+	@media (--lg) {
+		@for $i from 1 to $totalColumns {
+			$width: calc( $col * $(i) );
+			.col-lg-$i {
+				flex-basis: $width;
+				width: $width;
+			}
+		}
+		
+		.col-offset-lg {
+			margin-left: 0;
+		}
+	}
+
+	@media (--md) {
+
+		@for $i from 1 to $totalColumns {
+			$width: calc( $col * $(i) );
+			.col-md-$i {
+				flex-basis: $width;
+				width: $width;
+			}
+		}
+
+		.col-offset-md {
+			margin-left: 0;
+		}
+	}
+
+	@media (--sm) {
+
+		@for $i from 1 to $totalColumns {
+			$width: calc( $col * $(i) );
+			.col-sm-$i {
+				flex-basis: $width;
+				width: $width;
+			}
+		}
+
+		.col-offset-sm {
+			margin-left: 0;
+		}
+		
+		.pdr { padding-right: 0; }
+		.pdl { padding-left: 0; }
+	}
+
+}
+
+.stretch { align-items: stretch; }
+.end { align-items: flex-end; }
+.start { align-items: flex-start; }
+.col-enter { align-items: center; }
+.col-enter-h { justify-content: center; }
+
+/* -webkit-overflow-scrolling: touch - only safari iOS
+@media (--xs) {
+	.container, .row {
+		display: inline-block;
+	}
+	.special {
+		.container, .row {
+			display: flex;
+		}
+	}
+}
+*/

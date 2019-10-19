@@ -1,0 +1,176 @@
+/* Post article */
+&__post {
+
+	.article {
+
+		&__head {
+			margin: -6rem auto 0;
+			padding: 6rem $spacement 7rem;
+			box-shadow: none;
+			@media(--sm) {
+				padding: $spacement $spacement 5rem;
+			}
+		}
+
+		&__content {
+			& > p {
+				&:first-child {
+					&:first-letter {
+						display: block;
+						float: left;
+						margin: 0 1.4rem 0 0;
+						padding: 1rem 1.55rem;
+						min-width: 30px;
+						color: $white;
+						background-color: $black;
+						font-family: $titlingCondensed;
+						font-weight: 500;
+						font-size: 7rem;
+						line-height: 1;
+					}
+				}
+			}
+		}
+
+		&__content, &__contact, &__keywords, &__footer .kicker {
+			padding: 0 $spacement;
+		}
+
+	}
+
+	.kicker {
+		margin-bottom: 1rem;
+	}
+
+	.excerpt-sans {
+		margin-top: 3.2rem;
+	}
+
+}
+
+
+/* News article */
+&__news {
+
+	& > .article {
+		&__head {
+			box-shadow: none;
+			text-align: left;
+			margin: 0;
+			padding: 0 0 4rem;
+		}
+	}
+
+	.article {
+		&__hero {
+			margin-bottom: 5rem;
+			width: 100%;
+			height: auto;
+		}
+		&__footer {
+		    border-bottom: 1px solid black;
+		    padding-bottom: 2rem;
+			@media(--md) {
+				margin-bottom: calc(2 * $spacement);
+			}
+		}
+	}
+
+	.form {
+		margin-top: 8rem;
+		&__call {
+			font-size: $s16;
+		}
+		&__hs label {
+			font-size: $s14;
+		}
+	}
+
+}
+
+
+/* Archive page */
+&__archive {
+
+	.article {
+
+		&__hero {
+			background-image: url('./img/labs-placeholder.jpg');
+			background-size: cover;
+			background-position: center;
+			min-height: 100px;
+		}
+
+		&__head {
+			margin: -6rem auto 0;
+			padding: 6rem 5rem 7rem;
+			text-align: left;
+			
+			@media(--md) {
+				padding: 6rem $spacement 7rem
+			}
+
+			.excerpt-sans {
+				margin-top: 0;
+				@media(--md) {
+					margin-top: 2rem;
+				}
+				p {
+					margin-bottom: 2rem;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.col-md-24 {
+				&:first-child {
+					padding-right: $spacement;
+				}
+				&:only-child {
+					flex-basis: 100%;
+					width: 100%;
+					padding-right: 0;
+				}
+			}
+		}
+
+		&__avatar {
+			width: 160px;
+			height: 160px;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+
+	}
+
+}
+
+/* Article hero - featured img and padding */
+&__post, &__archive {
+	.article {
+		&__hero {
+			max-height: 420px;
+			min-height: 160px;
+			overflow: hidden;
+			object-fit: cover;
+			margin: auto;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+/* Author page */
+&__archive&__author {
+	.article {
+		&__hero {
+			height: 350px;
+		}
+		&__head {
+			margin: -10rem auto 0;
+		}
+	}
+}

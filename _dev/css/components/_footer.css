@@ -1,0 +1,154 @@
+.footer {
+	width: 100%;
+	background-color: $blackLight;
+
+	&__logo {
+		height: 72px;
+		margin: 3rem 0 $spacement;
+
+		svg {
+			width: 215px;
+			height: 60px;
+		}
+
+		@media (--sm) {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		p {
+			font-family: $titlingNarrow;
+			font-size: $s16;
+			font-range: $fontRange;
+			line-height: 1.56;
+			color: $white;
+
+			&.footer__source {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				font-size: $s12;
+				font-range: $fontRange;
+				margin-top: 2.6rem;
+
+				svg {
+					width: 100px;
+					height: 20px;
+					vertical-align: middle;
+					margin-left: 6px;
+				}
+
+				@media (--m-md) {
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+
+	&__menu {
+		&,
+		& > ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		& > ul:only-child {
+			width: 100%;
+
+			.menu-item-has-children > a {
+				display: none;
+			}
+		}
+
+		li {
+			margin-bottom: 2.6rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				font-family: $titlingCompressed;
+				font-size: $s15;
+				font-range: $fontRange;
+				font-weight: 500;
+				letter-spacing: 1.1px;
+				color: $greyIce;
+				text-transform: uppercase;
+			}
+		}
+		.lang {
+			&__mobile {
+				display: none;
+			}
+		}
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__disclaimer {
+		text-align: center;
+		border-top: 1px solid $white;
+		margin: 3.6rem 0;
+		padding-top: 1.6rem;
+
+		p {
+			font-family: $titlingNarrow;
+			font-size: $s14;
+			font-range: $fontRange;
+			font-weight: 300;
+			line-height: 1.4;
+			color: $white;
+		}
+	}
+
+	@media (--xlg) {
+		.container {
+			padding: 0 $spacement;
+		}
+	}
+
+	@media (--m-md) and (--lg) {
+		&__social {
+			.social {
+				flex-flow: column;
+
+				a {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	@media (--md) {
+		&__logo {
+			svg {
+				margin: 0 auto;
+			}
+		}
+
+		&__source {
+			text-align: center;
+		}
+
+		&__menu {
+			margin-top: 4rem;
+		}
+
+		&__social {
+			align-items: center;
+
+			.social {
+				margin: 4rem 0 $spacement;
+			}
+		}
+	}
+}

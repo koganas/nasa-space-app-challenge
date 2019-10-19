@@ -1,0 +1,107 @@
+.list {
+
+	&__thumb {
+		min-width: 360px;
+		min-height: 180px;
+		@media(--md) {
+			width: 240px;
+			height: 120px;
+		}
+		@media(--sm) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-flow: column;
+		padding: 1.4rem $spacement;
+		width: 100%;
+
+		.kicker {
+			margin-bottom: 1rem;
+		}
+		.head {
+			margin-bottom: auto;
+		}
+		.date {
+			margin-top: auto;
+		}
+	}
+
+	&__link {
+		margin: 3rem auto 0;
+	}
+
+	&__item {
+		border-top: 1px solid $black;
+		margin-bottom: $spacement;
+
+		&:first-child {
+			border-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			display: flex;
+			flex-flow: row;
+
+			//review card height issue
+			//max-height: 325px;
+			//overflow: hidden;
+			
+			@media(--sm) {
+				flex-flow: column;
+			}
+		}
+
+		&--featured {
+			border-top: 0;
+
+			.list {
+				&__thumb {
+					@media(--m-md) {
+						min-width: 650px;
+						min-height: 325px;
+					}
+					@media(--md) {
+						width: 100%;
+						height: auto;
+					}
+				}
+				&__info {
+					background-color: $white;
+					box-shadow: 0 2px 0 -1px $black;
+					text-align: center;
+					padding: 3rem 2.5rem 2rem;
+					margin: 5rem auto 5rem;	
+				}
+			}
+			img + .list {
+				&__info {
+					margin: 5rem 0 5rem -22%;
+				}
+			}
+
+			@media(--md) {
+				display: table;
+				width: 100%;
+
+				a {
+					flex-flow: column;
+				}		
+
+				img + .list {
+					&__info {
+						margin: -6rem auto 0;
+						width: 84%;
+					}
+				}
+			}
+
+		}
+	}
+
+}

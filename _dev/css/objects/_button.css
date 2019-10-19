@@ -1,0 +1,281 @@
+.btn {
+	background-color: $blue;
+	border-radius: $borderRadius;
+	color: $white;
+	font-family: $titlingCondensed;
+	letter-spacing: $smLetterSpacing;
+	border: 0;
+	padding: 12px 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: $s12;
+	font-range: $fontRange;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: all $cubic $animTime;
+	@media (--md) {
+		width: 100%;
+	}
+	&:hover {
+		background-color: $blue;
+	}
+	
+	&__cta {
+	    display: inline-block;
+	    font-family: $titlingCondensed;
+	    font-size: $s13;
+	    font-range: $fontRange;
+	    font-weight: 500;
+	    text-transform: uppercase;
+	    text-align: center;
+	    text-decoration: none;
+	    min-width: 10rem;
+	    cursor: pointer;
+	    border: 1px solid transparent;
+	    transition: all $cubic $animTime;
+	    padding: 4px 42px 4px 16px;
+	    background-image: url('./img/icons/icon-mail-white.svg');
+	    background-repeat: no-repeat;
+	    background-position: 85% center;
+	    background-size: 18px;
+	    background-color: $blue;
+	    color: $white;
+	    @media(--xmd) {
+	    	min-width: unset;
+	    	max-width: 3.4rem;
+	    	text-indent: 200%;
+	    	padding: 3px;
+	    	white-space: nowrap;
+	    	overflow: hidden;
+	    	background-position: center;
+	    }
+	}
+
+	&--rounded {
+		border-radius: $borderRadius;
+	}
+
+	&--hide {
+		opacity: 0;
+		visibility: none;
+	}
+
+	&--outline, &--inline, &--outline-dark {
+		width: 100%;
+		font-weight: bold;
+		font-size: $s14;
+		font-range: $fontRange;
+		text-decoration: none;
+	}
+	&--outline {
+		background-color: transparent;
+		border-color: $blue;
+		color: $blue;
+		&:hover {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+	&--inline {
+		background: $blue;
+		border-color: $blue;
+		color: $white;
+		&:hover {
+			background-color: rgba(100,160,200,.8);
+		}
+	}
+	&--outline-dark {
+		background-color: transparent;
+		border-color: $blue;
+		color: $blue;
+		&:hover {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+    &--green-dark {
+        color: $white;
+        background-color: $greenDark;
+        &:hover {
+            background-color: $green;
+        }
+        &:active {
+            background-color: $green;
+        }
+    }
+
+	&--sm {
+		font-size: $s10;
+		font-range: $fontRange;
+		font-weight: bold;
+		text-transform: none;
+		padding: 4px 8px;
+		border: 2px solid transparent;
+		&:hover {
+			background-color: transparent;
+			border: 2px solid $blue;
+			color: $blue;
+		}		
+	}
+	&--color {
+		&:hover {
+			background-color: transparent;
+		}	
+	}
+
+	&--bluelt {
+		background-color: $blue;
+		&:hover {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+	&--green {
+		background-color: $green;
+		&:hover {
+			background-color: $greenDark;
+		}
+	}
+	&--white {
+		background-color: transparent;
+		border-color: $white;
+		font-size: $s12;
+		font-range: $fontRange;
+		height: 40px;
+		width: 100%;
+		padding: initial;
+		font-weight: bold;
+		&:hover {
+			background-color: rgba(255,255,255, 0.3);
+		}
+	}
+	&--social {
+		font-family: $titlingCondensed;
+		font-size: $s10;
+		letter-spacing: $smLetterSpacing;
+		text-transform: none;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content: center; 
+		padding: 0;
+		text-align: right;
+		/* padding: 8px 10px; */
+		svg {
+			margin-right: 8px;
+		}
+		@media (--md) {
+			margin: 8px 0;
+		}
+	}
+	&--call {
+		&:after {
+			display: inline-block;
+			content: '▸';
+			margin-left: 10px;
+			margin-top: -4px;
+			font-size: 18px;
+		}
+	}
+	&--fb {
+		span, iframe{
+			display: block!important;
+			margin: 0 auto;
+		}
+	}
+
+	&--linkedin { background-color: $blueLinkedin; }
+	&--google {
+		background-color: transparent;
+		display: inline-block;
+		@media (--md) {
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__search {
+		width: 30px;
+		height: 25px;
+		border: 0;
+		background-color: transparent;
+		outline: none;
+		transition: all .3s ease;
+		cursor: pointer;
+		appearance: none;
+		margin-left: $spacement;
+		position: relative;
+		svg {
+			opacity: 1;
+			visibility: visible;
+		}
+		.btn__close {
+			position: absolute;
+			left: 2px;
+			top: 10px;
+			width: 24px;
+			z-index: -1;
+			opacity: 0;
+			visibility: hidden;
+		}
+		&:hover {
+			background-color: transparent;
+		}
+		&--toggle {
+			svg {
+				opacity: 0;
+				visibility: hidden;
+			}
+			.btn__close {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__close {
+		height: 24px;
+		width: 24px;
+		position: relative;
+		cursor: pointer;
+		padding: 0;
+		appearance: none;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		@import '../objects/ico/_hamburger.css';
+		@import '../objects/ico/_close.css';
+	}
+}
+
+li {
+	.btn {
+		background-color: $white;
+		color: $greyLight;
+		letter-spacing: normal;
+		border: solid 1px $greyLight;
+		padding: 4px 6px 6px;
+		text-transform: none;
+		font-size: $s10;
+		font-range: $fontRange;
+		transition: $animTime;
+		&:hover {
+			background-color: $greyUltraLight;
+		}
+	}
+}
+
+a {
+	transition: $animTime;
+	cursor: pointer;
+	&:hover {
+		color: $blue;
+	}
+}
+
+/* Unique buttons */
+#readContent {
+	margin-top: 60px;
+}
+
+#btnUpdates {
+	display: none;
+}

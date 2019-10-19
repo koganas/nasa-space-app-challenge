@@ -1,0 +1,15 @@
+&__lang {
+	display: block;
+	text-align: center;
+	color: $orange;
+	font-family: $titlingNarrow;
+	font-size: $s14;
+	text-decoration: underline;
+
+	margin-top: -20px;
+	margin-bottom: 20px;
+
+	&:hover {
+		color: $blue;
+	}
+}

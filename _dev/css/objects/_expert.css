@@ -1,0 +1,60 @@
+/* Expert sections */
+
+.expert {
+	text-align: center;
+	max-width: 260px;
+	margin: auto;
+	padding: 0 1.1rem;
+
+	&__avatar {
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	.kicker {
+		margin: 2.4rem 0 1.4rem;
+	}
+
+	.excerpt {
+		margin-top: 1.6rem;
+		
+		display: -webkit-box;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-clamp: 3;
+		box-orient: vertical;
+	}
+
+	@media (--m-sm) and (--md){
+		
+		padding: 0 1.6rem;
+
+		&__avatar {
+			width: 140px;
+			height: 140px;
+
+		}
+
+	}
+
+	@media (--sm) {
+		margin-bottom: 4rem;
+	}
+
+}
+
+@media (--sm) {
+	#experts div {
+		a {
+			&:last-child {
+				.expert {
+					margin-bottom: 0;
+				}
+			}
+		}		
+	}
+}

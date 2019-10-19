@@ -1,0 +1,18 @@
+/* Media queries */
+@custom-media --xs (width <= $xs);
+@custom-media --m-xs (width >= $m-xs);
+
+@custom-media --sm (width <= $sm);
+@custom-media --m-sm (width >= $m-sm);
+
+@custom-media --md (width <= $md);
+@custom-media --m-md (width >= $m-md);
+
+@custom-media --xmd (width <= $xmd);
+@custom-media --m-xmd (width >= $m-xmd);
+ 
+@custom-media --lg (width <= $lg);
+@custom-media --m-lg (width >= $m-lg);
+
+@custom-media --xlg (width <= $xlg);
+@custom-media --m-xlg (width >= $m-xlg);

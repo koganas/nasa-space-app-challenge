@@ -1,0 +1,161 @@
+.videos {
+    margin-top: 60px;
+
+    &__section {
+        width: 100%;
+        margin-top: 30px;
+        background-color: $white;
+        border-radius: $borderRadius;
+        box-shadow: 0 15px 40px -14px rgba(0, 0, 0, 0.5);
+
+        li {
+            transition: all $animTime ease;
+            padding-top: 5px;
+            margin-top: 10px;
+            padding-right: 30px;
+            border-right: solid 5px transparent;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-size: $s16;
+                font-range: $fontRange;
+                font-weight: 600;
+            }
+            h2, .status { pointer-events: none; }
+            .status {
+                font-size: $s10;
+                font-range: $fontRange;
+                font-weight: bold;
+                color: $greyMidLight;
+                position: relative;
+
+                &__now {
+                    position: absolute;
+                    top: 0; left: 0;
+                    min-width: 80px;
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        display: inline-block;
+                        width: 0;
+                        cursor: pointer;
+                        border-style: solid;
+                        border-width: 5px 0 5px 8px;
+                        height: 1px;
+                        margin-right: 5px;
+                        border-color: transparent transparent transparent $blue;
+                    }
+                }
+            }
+            &.active, &:hover {
+                border-right: solid 5px $blue;
+                h2 { font-weight: bold; }
+                .status {
+                    color: $blue;
+                }
+            }
+            &:hover { cursor: pointer; }
+
+            @media (--md){
+                padding: 10px 20px;
+            }
+        }
+
+        &_subscribe { 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 90px;
+            border: solid 1px $blue;
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+            background-color: $blue;
+            h4 { 
+                font-size: $s18;
+                color: $white;
+                padding: 0 20px;
+            }
+            font-range: $fontRange;
+
+            @media (--md){
+                flex-flow: column;
+                padding: 20px;
+                h4 { margin-bottom: 20px; text-align: center; }
+            }
+            &_cta {
+                display: flex;
+                align-items: center;
+                background-color: #e8f3fb;
+                border-radius: $borderRadius;
+                padding: 10px;
+                transition: background-color $animTime $cubic;
+                font-family: $titlingNarrow;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1;
+                letter-spacing: $smLetterSpacing;
+                color: $blueDark;
+                font-size: $s14;
+                min-width: 263px;
+                span {margin-right: 10px;}
+            }
+        }
+    }
+}
+
+.yt-player, .video__container {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+    img {
+        bottom: 0;
+        display: block;
+        left: -3px;
+        margin: auto;
+        max-width: calc(100% + 6px);
+        width: calc(100% + 6px);
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        height: auto;
+        cursor: pointer;
+        -webkit-transition: .4s all;
+        -moz-transition: .4s all;
+        transition: .4s all;
+        &:hover {
+            -webkit-filter: brightness(75%);
+        }
+    }
+    .play {
+        height: 50px;
+        width: 72px;
+        left: 50%;
+        top: 50%;
+        margin-left: -36px;
+        margin-top: -26px;
+        position: absolute;
+        background: url('./img/icons/btn-yt-play.png') no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        transition: opacity $animTime ease;
+    }
+    &:hover {
+        .play { opacity: 0.7; }
+    }
+}

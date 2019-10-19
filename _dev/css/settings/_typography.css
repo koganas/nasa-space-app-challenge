@@ -1,0 +1,66 @@
+/* Font-family */
+$titling: titling-gothic-fb, sans-serif;
+$titlingNarrow: titling-gothic-fb-narrow, sans-serif;
+$titlingCompressed: titling-gothic-fb-compressed, sans-serif;
+$titlingCondensed: titling-gothic-fb-condensed, sans-serif;
+$poynter: poynter-oldstyle-text, serif;
+
+/* Responsive Font Range */
+$fontRange: 320px 1200px;
+
+/* Line height */
+$lh20: responsive 1.5rem 2rem;
+$lh25: responsive 2rem 2.5rem;
+$lh30: responsive 2.5rem 3rem;
+$lh35: responsive 3rem 3.5rem;
+$lh40: responsive 3.5rem 4rem;
+$lh45: responsive 4rem 4.5rem;
+$lh50: responsive 4.5rem 5rem;
+
+/* Letter spacing */
+$smLetterSpacing: 0.5px;
+$letterSpacing: 1.5px;
+
+/* Range 0.1 */
+$s08: responsive 0.7rem 0.8rem;
+$s09: responsive 0.8rem 0.9rem;
+$s10: responsive 0.9rem 1rem;
+$s11: responsive 1rem 1.1rem;
+$s12: responsive 1.1rem 1.2rem;
+$s13: responsive 1.2rem 1.3rem;
+
+/* Range 0.3 */
+$s14: responsive 1.1rem 1.4rem;
+$s15: responsive 1.2rem 1.5rem;
+$s16: responsive 1.3rem 1.6rem;
+$s17: responsive 1.4rem 1.7rem;
+$s18: responsive 1.5rem 1.8rem;
+$s19: responsive 1.6rem 1.9rem;
+$s20: responsive 1.7rem 2rem;
+$s21: responsive 1.8rem 2.1rem;
+$s22: responsive 1.9rem 2.2rem;
+
+/* Range 0.4 */
+$s24: responsive 2rem 2.4rem;
+$s25: responsive 2.1rem 2.5rem;
+
+/* Range 0.6 */
+$s26: responsive 2rem 2.6rem;
+$s28: responsive 2.2rem 2.8rem;
+$s30: responsive 2.4rem 3rem;
+$s32: responsive 2.6rem 3.2rem;
+$s33: responsive 2.7rem 3.3rem;
+$s34: responsive 2.8rem 3.4rem;
+$s35: responsive 2.9rem 3.5rem;
+$s36: responsive 3rem 3.6rem;
+$s40: responsive 3.4rem 4rem;
+$s45: responsive 3.9rem 4.5rem;
+$s46: responsive 4rem 4.6rem;
+
+$s50: responsive 4.4rem 5rem;
+$s55: responsive 4.9rem 5.5rem;
+$s56: responsive 5rem 5.6rem;
+$s60: responsive 5.4rem 6rem;
+$s66: responsive 6rem 6.6rem;
+$s70: responsive 6.4rem 7rem;
+$s80: responsive 7.4rem 8rem;

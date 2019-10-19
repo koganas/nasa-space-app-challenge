@@ -1,0 +1,172 @@
+/*
+This file sets general font rules - family, size, weight, line-height, case and colors.
+Exceptions: header, footer, forms and post content elements - only the p tag is set here.
+Alignment, spacement and custom colors are set directly on components.
+*/
+
+
+/* Titles */
+.head {
+	font-family: $titlingNarrow;
+	font-weight: 500;
+	color: $black;
+	font-size: $s20;
+	font-range: $fontRange;
+	line-height: 1.15;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+
+	&--sm {
+		font-size: $s16;
+		font-range: $fontRange;
+	}
+
+	&--xsm {
+		font-size: $s18;
+		font-range: $fontRange;
+	}
+
+	&--md {
+		font-size: $s25;
+		font-range: $fontRange;
+	}
+
+	&--xmd {
+		font-size: $s35;
+		font-range: $fontRange;
+	}
+
+	&--lg {
+		font-size: $s45;
+		font-range: $fontRange;
+		@media(--sm) {
+			font-size: $s25;
+			font-range: $fontRange;
+		}
+	}
+
+	&--xlg {
+		font-size: $s55;
+		font-range: $fontRange;
+		line-height: 1.09;
+		@media(--sm) {
+			font-size: $s26;
+			font-range: $fontRange;
+		}
+	}
+
+	&--lt {
+		font-weight: 300;
+	}
+
+}
+
+.title {
+	font-family: $titlingCondensed;
+	font-weight: 300;
+	font-size: $s36;
+	font-range: $fontRange;
+	text-transform: uppercase;
+	color: $greyDark;
+
+	&--aside {
+		font-size: $s30;
+		font-range: $fontRange;
+	}
+}
+
+
+/* Markers */
+.kicker {
+	font-family: $titlingCompressed;
+	font-size: 1.8rem; /* always 1.8rem, no responsive range */
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+	color: $orange;
+	display: inline-block;
+
+	&--blue {
+		color: $blue;
+	}
+}
+
+.cat {
+	font-family: $titlingNarrow;
+	font-weight: normal;
+	color: $blue;
+}
+
+.signature {
+	font-family: $titlingCondensed;
+	font-weight: 300;
+	font-size: $s16;
+	font-range: $fontRange;
+	line-height: 1.2;
+	color: $black;
+}
+
+.date {
+	font-family: $titlingCondensed;
+	font-weight: 300;
+	font-size: $s18;
+	font-range: $fontRange;
+	color: $blackLight;
+}
+
+
+/* Paragraph */
+p {
+	font-family: $poynter;
+	font-weight: 300;
+	font-size: $s20;
+	font-range: $fontRange;
+	line-height: 1.6;
+
+	.desc {
+		font-size: $s16;
+		font-range: $fontRange;
+		line-height: 1.5;
+	}
+}
+
+.excerpt-sans {
+	&, & * {
+		font-family: $titlingNarrow;
+		font-size: $s20;
+		font-range: $fontRange;
+		line-height: 1.5;
+		color: $black;
+	}
+}
+
+.excerpt {
+	font-family: $poynter;
+	font-size: $s16;
+	font-range: $fontRange;
+	line-height: 1.5;
+	color: $blackLight;
+}
+
+.description {
+	font-family: $titlingCompressed;
+	font-weight: 400;
+	font-size: $s18;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: $letterSpacing;
+	color: $white;
+}
+
+
+/* Links & buttons */
+.link {
+	font-family: $titlingCondensed;
+	font-weight: 400;
+	font-size: $s19;
+	font-range: $fontRange;
+	text-transform: uppercase;
+	color: $blue;
+	text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+/* Close icon 3 span */
+span {
+	& + span { margin: 0; }
+	&:nth-child(1){ transform: rotateZ(40deg); }
+	&:nth-child(2){
+		opacity: 0;
+		left: -25%;
+	}
+	&:nth-child(3){
+		transform: rotateZ(-40deg);
+		top: -4px;
+	}
+}

@@ -1,0 +1,344 @@
+.nav {
+	&__special {
+		box-shadow: 0 2px 15px -2px rgba(100, 100, 100, 0.65);
+		max-height: 70px;
+
+		/* custom .nav__menu */
+		.nav__menu_hamburger span { background-color: #FFF;  }
+		&.header .nav__menu_links ul>li {
+			@media(--sm) {
+				padding-bottom: 10px;
+			}
+		}
+		.nav__menu_links_child {
+			@media(--m-md) {
+				margin-top: .8rem;
+				padding: 3rem 3rem 2rem;
+			}
+		}
+
+		&_list {
+			li {
+				display: inline-block;
+				a {
+					color: $white;
+					font-size: $s16;
+					font-range: $fontRange;
+					font-family: $titlingCondensed;
+					font-weight: 500;
+					text-decoration: none;
+					text-transform: none;
+					&:hover {
+						color: #5cd9a2;
+					}
+				}
+			}
+		}
+
+		&--blue {
+			background-color: $blue;
+			.nav__menu_links { background-color: $blue; }
+			.nav__menu_links_child { background-color: $bluelpDark; }
+		}
+		&--whats {
+			background-color: #528781;
+			.nav__menu_links { background-color: #528781; }
+			.nav__special_list {
+				li {
+					a {
+						&:hover {
+							color: #5cd9a2;
+						}
+						&:after {
+							content: '';
+							display: inline-block;
+							margin-left: 5px;
+							background-image: url('./img/special/wp/ticket.svg');
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position: center;
+							width: 30px;
+							height: 15px;
+							@media (--sm) {
+								width: 20px;
+								height: 12px;							
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media (--sm) {
+			max-height: 86px;				
+			&_list {
+				li{
+					float: right;
+					& + li { margin-left: 0; margin-top: 8px; }
+				}
+			}
+		}
+		@media (--m-md) and (width <= 994px) {
+			&_list {
+				li{
+					float: right;
+					clear: both;
+					margin-right: 0!important;
+					& + li { margin-top: 1rem; }
+				}
+			}
+		}
+		.nav__logo {
+			max-width: 100px;
+			&_sm img {
+				max-height: 35px;
+				min-width: 100px;
+			}
+		}
+	}
+}
+
+/* info elements */
+.info {
+	&-block {
+		margin: 60px auto;
+		@media (--m-lg) { width: 65%; }
+		@media (--m-md) and (--lg) { width: 80%; }
+
+		&--lg {
+			font-size: $s24;
+			font-range: $fontRange;
+		}
+		
+		.col-24 {
+			padding: 0 2rem;
+		}
+		.col-2 {
+			img {
+				max-width: 68%;
+				@media (--md) {
+					max-height: 80px;
+					margin: 0 auto 20px;
+				}
+			}
+		}
+		p { margin-top: 8px; }
+		&--max {
+			max-width: 720px;
+			margin: 3rem auto 1.5rem;
+		}
+	}
+
+	&-box {
+		background-color: $greenlpDark;
+		padding: 3rem 2rem;
+		font-family: $titlingNarrow;
+		font-size: $s16;
+		font-range: $fontRange;
+		line-height: 2.5rem;
+		color: #FFF;
+		text-align: center;
+		margin-left: 4rem;
+		@media (--m-md) { max-width: 220px; }
+		@media (--md) { margin-left: 0; margin-top: 2.5rem; }
+	}
+
+	&-data {
+		text-align: center;
+		max-width: 705px;
+		margin: 8rem auto;
+		@media(--md) {
+			p { padding: 0 2rem; }
+		}
+		li, p, p.title {
+			font-family: $titlingNarrow;
+			color: #FFF;
+			font-weight: normal;
+			span {
+				font-weight: bold;
+				display: inline-block;
+			}
+		}
+		ul {
+			max-width: 570px;
+			display: table;
+			margin: 0 auto;
+		}
+		&__arrow {
+			width: 130px;
+			height: auto;
+			display: table;
+			margin: 4rem auto 2rem;
+		}
+		p.title {
+			font-size: $s36;
+			font-range: $fontRange;
+			text-transform: none;
+			span {
+				font-size: $s70;
+				font-range: $fontRange;
+			}
+		}
+		li, p {
+			font-size: $s26;
+			font-range: $fontRange;
+			span {
+				font-size: $s50;
+				font-range: $fontRange;
+			}
+		}
+		li {
+			position: relative;
+			margin-bottom: 20px;
+			img {
+				display: inline-block;
+				margin-left: 8px;
+			}
+			& + li {
+				&:before {
+					display: inline-block;
+					position: absolute;
+					width: 100%;
+					max-width: 120px;
+					height: 3px; 
+					background-color: #FD4127;
+					top: 0;
+					left: 38.5%;
+				}
+			}
+		}
+		&--light {
+			li, p, p.title {
+				color: $greylp;
+			}
+			li {
+				& + li {
+					&:before { background-color: $blue; }
+				}
+			}
+		}
+	}
+}
+
+.img {
+	&--mobile {
+		@media(--md) {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+/* audio player */
+.special .audio {
+	&__player {
+		 width: 80%;
+		 min-width: 90px;
+		 display: inline-block;
+		 vertical-align: middle;
+		 margin: 5px 15px auto;
+		 @media (--lg) { max-width: 75%; }
+		 @media (--sm) { max-width: 70%; }
+	}
+	&__controls {
+		&_btn {
+			width: 35px;
+			height: 35px;
+			margin-right: 24px;
+			&--play {
+				background: url('./img/special/wp/icon-play.svg') no-repeat center;
+			}
+			&--pause {
+				background: url('./img/special/wp/icon-pause.svg') no-repeat center;
+			}
+		}
+	}
+	&__timeline {
+		width: 100%;
+		&_bar {
+			background-color: $greyBorder;
+			&_percentage {
+				background-color: #028779;
+				&:after {
+					content: '';
+					display: block;
+					background-color: #028779;
+					border-radius: 50%;
+					height: 1.4rem;
+					width: 1.4rem;
+					position: absolute;
+					right: 0;
+					top: -4px;
+				}
+			}
+		}
+		&_current { padding-left: 0; }
+		&_current, &_total {
+			color: $greyBorder;
+			font-family: $titlingNarrow; /* textbody */
+			line-height: .7rem;
+			font-size: $s12;
+			font-range: $fontRange;
+		}
+	}
+}
+
+/* others */
+.source {
+	font-family: $titlingNarrow;
+	font-weight: bold;
+	color: $greenlpDark;
+	font-size: $s14;
+	font-range: $fontRange;
+	margin-top: 30px;
+}
+
+.contract {
+	min-height: 240px;
+	img {
+		max-width: 270px;
+		position: absolute;
+		transform: rotate(-6deg);
+		margin-top: -60px;
+		@media (--md) {
+			max-width: 200px;
+			position: absolute;
+			left: 16%;
+		}
+		@media (--m-md) and (--lg) {
+			max-width: 230px;
+			left: -4rem;
+		}
+	}
+}
+
+.icon {
+	&__audio {
+		border-radius: 50%;
+		float: right;
+		background-color: #028779;
+		width: 6rem; height: 6rem;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		transition: background-color $animTime $cubic;
+		border: 0;
+		outline: 0;
+		background-image: url('./img/special/wp/mic.svg');
+		background-size: 40px;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media (--lg) {
+			width: 5.4rem; height: 5.4rem;
+		}
+		@media (--md) {
+			width: 5rem; height: 5rem;
+		}
+		@media (--sm) {
+			width: 4.2rem; height: 4.2rem;
+			margin-top: .6rem;
+		}
+		@media (--xs) {
+			height: 3.8rem; width: 3.8rem;
+		}
+	}	
+}

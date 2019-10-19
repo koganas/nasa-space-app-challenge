@@ -1,0 +1,39 @@
+.title {
+
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	margin: 6.4rem auto 3rem;
+
+	&:before, &:after {
+		content: '';
+		display: inline-block;
+		position: relative;
+		vertical-align: super;
+		width: 50%;
+		height: 3px;
+		background-color: $greyDark;
+	}
+	&:before {
+		right: 4rem;
+		margin-left: -50%;
+	}
+	&:after {
+		left: 4rem;
+		margin-right: -50%;
+	}
+
+	&--aside {
+		text-align: left;
+		margin: 0 auto 1.6rem;
+
+		&:before {
+			display: none;
+		}
+		&:after {
+			left: 1rem;
+			width: 100%;
+		}
+	}
+
+}

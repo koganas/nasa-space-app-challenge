@@ -1,0 +1,29 @@
+&__collection {
+	display: flex;
+	flex-flow: row;
+	border: 1px solid $blackLight;
+	border-right: 0;
+	border-left: 0;
+	margin-bottom: 6rem;
+
+	& > img {
+		margin: 1.4rem auto;
+	}
+
+	@media(--sm) {
+		flex-flow: column;
+		& > img {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.kicker {
+		color: $black;
+	}
+	.date {
+		color: $orange;
+		text-decoration: underline;
+		margin-top: 1rem;
+	}
+
+}

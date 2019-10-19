@@ -1,0 +1,325 @@
+.whats {
+	&__stories {
+		width: 292px;
+		height: 520px;
+		background-color: $greylp;
+		position: relative;
+		cursor: pointer;
+		margin: 0 auto;
+
+		&_video {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+
+			video {
+				width: 100%;
+				height: 520px;
+			}
+
+			&--play {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: 11;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 3rem 0 3rem 5rem;
+				border-color: transparent transparent transparent #FFF;
+				line-height: 0px;
+				_border-color: #000000 #000000 #000000 #FFF;
+				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+				top: 43%;
+				left: 45%;
+				opacity: .5;
+				transition: opacity $animTime $cubic;
+				&.ps { opacity: 0; }
+			}
+			&:hover {
+				.whats__stories_video--play { opacity: .9; &.ps { opacity: 0; } }
+			}
+		}
+		&_timeline, &_pf {
+		    position: relative;
+		    z-index: 1;
+		}
+
+		&_timeline {
+			width: 90%;
+			margin: 0 auto;
+			li {
+				width: 15%;
+				margin-right: 1%;
+				margin-top: 2rem;
+				height: 4px;
+				display: inline-block;
+				transition: opacity $animTime $cubic;
+				cursor: pointer;
+				opacity: .7;
+				background-color: #FFF;
+				&:last-child { margin-right: 0; }
+				&.active, &:hover { opacity: 1; }
+			}
+		}
+
+		&_pf {
+			width: 150px;
+			margin: 1.5rem 2.5rem;
+			a { text-decoration: none; color: #FFF; }
+			&--img, &--txt {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&--img {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				background-color: #FFF;
+				background-image: url('./img/special/wp/labs-logo.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				overflow: hidden;
+				margin-right: .8rem;
+			}
+			&--txt {
+				color: #FFF;
+				font-family: $titlingNarrow; /* textbody */
+				p {
+					font-family: $titlingNarrow; /* textbody */
+					font-weight: bold;
+					font-size: $s12;
+					font-range: $fontRange;
+				}
+			}
+		}
+		&_arrow {
+			&--next, &--prev {
+				z-index: 1;
+				width: 20px;
+				height: 32px;
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-size: contain;
+				position: absolute;
+				top: 46%;
+				background-image: url('./img/special/wp/arrow-stories.png');
+			}
+			&--next {
+				transform: rotate(180deg);
+				right: 1rem;
+			}
+			&--prev { left: 1rem; }
+		}
+	}
+
+	&__balloon {
+		padding: 1.6rem 3rem;
+		margin: 0 0 20px;
+		position: relative;
+		color: $greylp;
+		font-size: $s14;
+		font-range: $fontRange;
+		line-height: 2.2rem;
+		box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+		width: 100%;
+		font-family: $titlingNarrow; /* textbody */		
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+		.data {
+			display: inline-block;
+			padding: 0 20px 0 16px;
+			font-size: $s11;
+			font-range: $fontRange;
+			color: #b9b9b9;
+			position: relative;
+			bottom: -5px;
+			float: right;
+			background-repeat: no-repeat;
+			background-position: right 3px;
+			background-color: transparent;
+			background-size: 16px auto;
+			&.blue {}
+		}
+		.name {
+			font-size: $s12;
+			font-range: $fontRange;
+			color: #fd4127;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 6px;
+		}
+		img { width: 100%; }
+		&.msg {
+			background: $greenlp;
+			float: right;
+			border-radius: 5px 0px 5px 5px;
+			&:after {
+				top: 0;
+				right: -10px;
+				border-width: 0px 0 10px 10px;
+				border-color: transparent transparent transparent $greenlp;
+			}
+		}
+		&.reply {
+			float: left;
+			border-radius: 0px 5px 5px 5px;
+			.data { padding: 0 0 0 16px; }
+			&:after {
+				top: 0;
+				left: -10px;
+				border-width: 0px 10px 10px 0;
+				border-color: transparent #fff transparent transparent;
+				content: ""; display: table; clear: both;
+			}
+			&.green {
+				&:after { border-color: transparent $greenlp transparent transparent; }
+				.data { color: #FFF; }
+			}
+		}
+		&.replyrt {
+			float: right;
+			border-radius: 5px 0px 5px 5px;
+			&:after {
+				top: 0;
+				right: -10px;
+				border-width: 0px 0 10px 10px;
+				border-color: transparent transparent transparent #fff;
+				content: ""; display: table; clear: both;
+			}
+			&.green {
+				&:after { border-color: transparent transparent transparent $greenlp; }
+				.data { color: #FFF; }
+			}
+		}
+		&.reply, &.replyrt {
+			background: #FFF;
+			&.green {
+				background: $greenlp;
+				color: #FFF;
+				.name { color: $greenlpDark; }
+			}
+		}
+		&.ico {
+			&--bride, &--money, &--shirt {
+				position: relative;
+				&:before {
+					display: block;
+					content: '';
+					position: absolute;
+					width: 60px;
+					height: 60px;
+					top: 3rem;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+			&--bride, &--shirt {
+				&:before {
+					right: -3rem;
+				}
+			}
+			&--bride:before {
+				background-image: url('./img/special/wp/emojis/icon-bride.png');				
+			}
+			&--money:before {
+				background-image: url('./img/special/wp/emojis/icon-money.png');
+				left: -4rem;
+			}
+			&--shirt:before {
+				background-image: url('./img/special/wp/emojis/icon-shirt.png');
+			}
+		}
+	}
+
+	&__info {
+		background-color: #b8cbe1;
+		border-radius: 15px;
+		box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+		text-align: center;
+
+		font-family: $titlingNarrow;
+		font-size: $s16;
+		font-range: $fontRange;
+		font-weight: 600;
+		color: $greylp;
+		padding: 2rem 4rem;
+		margin-bottom: 20px;
+
+		&--content {
+			display: inline-block;
+			margin: 0 auto 20px;
+			font-weight: normal;
+		}
+
+		h6 {
+			color: $greylp;
+			font-size: $s20;
+			font-range: $fontRange;
+			font-weight: normal;
+		}
+	}
+
+	&__thumb {
+		background-color: $greylpLight;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 2px solid #FFF;
+		box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		position: relative;
+		float: left;
+		margin-right: 1rem;
+		@media (width >= 1130px) { margin-right: 2rem; }
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		& + .whats__balloon {
+			max-width: 82%;
+			display: inline-block;
+			position: relative;
+			@media (--m-md) and ( width <= 1038px ) {
+				max-width: 65%;
+			}
+			@media (--md) {
+				max-width: 66%;				
+			}
+			@media (--xs) {
+				max-width: 60%;	
+			}
+		}
+		& + .replyrt {
+			max-width: 75%;
+			float: right;
+			@media (--md) {
+				max-width: 66%;		
+			}
+			@media (--xs) {
+				max-width: 60%;	
+			}
+		}
+		&--rt {
+			float: right;
+			margin-right: 0;
+			margin-left: 1rem;
+		}
+	}
+
+	&__container {
+		display: table;
+	}
+
+}

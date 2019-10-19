@@ -1,0 +1,38 @@
+$langPadding: 12px;
+
+.lang {
+	display: flex;
+    flex-flow: row;
+
+    &__icon {
+    	min-width: 28px;
+    }
+	
+	&__item {
+		font-family: $titlingCompressed;
+		font-size: $s12;
+		font-range: $fontRange;
+		font-weight: 500;
+		color: $white;
+		margin-right: $langPadding;
+
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:after {
+			content: '|';
+			display: inline-block;
+			margin-left: $langPadding;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+
+	}
+}

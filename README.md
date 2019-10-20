@@ -6,7 +6,7 @@ Website with interactive graphics and information about climate change and risin
 https://aguanoumbigo.co
 
 ## Technologies
-Javascript
-Nunjucks
-PostCSS
-CSS3 animations
+- Javascript
+- Nunjucks
+- PostCSS
+- CSS3 animations

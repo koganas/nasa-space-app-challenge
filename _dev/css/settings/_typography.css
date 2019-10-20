@@ -1,9 +1,6 @@
 /* Font-family */
-$titling: titling-gothic-fb, sans-serif;
-$titlingNarrow: titling-gothic-fb-narrow, sans-serif;
-$titlingCompressed: titling-gothic-fb-compressed, sans-serif;
-$titlingCondensed: titling-gothic-fb-condensed, sans-serif;
-$poynter: poynter-oldstyle-text, serif;
+$oswald: 'Oswald', sans-serif;
+$nunito: 'Nunito', sans-serif;
 
 /* Responsive Font Range */
 $fontRange: 320px 1200px;

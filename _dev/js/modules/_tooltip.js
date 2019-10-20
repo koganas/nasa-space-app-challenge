@@ -32,7 +32,7 @@ const _tooltip = {
   showTooltip(event, text) {
     let tooltip = document.createElement('span');
     tooltip.classList.add('tooltip');
-    tooltip.innerHTML = '<p>' + event.target.innerHTML + '</p>' + text;
+    tooltip.innerHTML = '<p>' + text + '</p>';
     event.target.appendChild(tooltip);
     setTimeout(() => {
       tooltip.style.opacity = 1;

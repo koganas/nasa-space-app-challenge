@@ -1,6 +1,3 @@
-$font-headline: 'Poppins', sans-serif;
-$font-context: 'Roboto', sans-serif;
-
 body {
 	background: #1b1b1b;
 	margin: 0;
@@ -35,68 +32,80 @@ body {
 		border-radius: 3px;
 		box-shadow: 0px 5px 11px -7px #000;
 		text-align: center;
+		max-width: 900px;
+		margin: 0 auto;
 	}
 	&-container {
-		padding: 25px 30px;
+		padding: 25px 30px 40px;
 		position: relative;
 	}
 	&-question {
-		width: max-content ;
-		max-width: 700px;
+		width: 100%;
+		text-align: center;
 		color: #FFF;
-		font-family: $font-headline;
+		font-size: $s20;
+		font-range: $fontRange;
+		font-family: $nunito;
+		font-weight: 900;
 	}
 	&-panel.poll-voted {
 		overflow: hidden;
-		border-radius: 50px;
+		border-radius: 20px;
 		.poll-panel-btn {
+			background: #676464;
+			color: #FFF;
+			border-radius: 0;
+			margin: 0;
+			border: 0;
+			position: relative;
+			&.ct {
+				background: #5d9e19;
+			}
+			&:hover {
+				color: #FFF;
+				background: #676464;
+			}
+			&:after {
+				content: attr(data-result);
+				font-size: 9px;
+				display: block;
+				opacity: 0.5;
+				animation: slideWithFade .2s ease;
+			}
+			&:active {
+				transform: inherit
+			}
+			span {
+				display: block
+			}
 			&.--user-choice {
 				background: #FFF;
 				color: #000;
+				&.ct {
+					background: #5d9e19;
+				}
 				&:hover {
 					color: #000;
 					background: #FFF;
 				}
 			}
-			& {
-				background: #676464;
-				color: #FFF;
-				border-radius: 0;
-				margin: 0;
-				border: 0;
-				position: relative;
-				&:hover {
-					color: #FFF;
-					background: #676464;
-				}
-				&:after {
-					content: attr(data-result);
-					font-size: 9px;
-					display: block;
-					opacity: 0.5;
-					animation: slideWithFade .2s ease;
-				}
-				&:active {
-					transform: inherit
-				}
-				span {
-					display: block
-				}
-			}
-
 		}
 	}
 		
 	&-panel {
 		width: 100%;
 		&-btn {
-			padding: 7px 10px;
-			font-family: $font-context;
-			font-size: .8rem;
+			padding: 12px 10px;
+			font-family: $nunito;
+			font-size: $s14;
+			font-range: $fontRange;
 			width: 100%;
 			border-radius: 50px;
 			border: 1px solid #FFF;
 			margin: 0 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			color: #FFF;
 			transition: .15s cubic-bezier(.17,.67,.79,1.24);
 			&:hover {

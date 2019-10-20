@@ -1,12 +1,12 @@
 'use strict';
 
-import _waves from '../modules/_waves';
+import _tooltip from '../modules/_tooltip';
 import _poll from '../modules/_poll';
 
 (() => {
   const core = {
     init() {
-      _waves.init();
+      _tooltip.init();
       _poll.init();
     }
   };

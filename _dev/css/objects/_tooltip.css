@@ -1,0 +1,25 @@
+/*a[data-tooltip] {}*/
+
+.tooltip {
+	width: 200px;
+	position: absolute;
+	top: 0;
+	padding: 16px;
+	margin-left: 24px;
+	border-radius: 5px;
+	background-color: #FFF;
+
+	font-weight: normal;
+	box-shadow: 0 2px 25px -5px rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	z-index: 10;
+	p {
+		margin: 0 0 6px;
+		font-family: $nunito;
+		font-weight: 400;
+		font-size: $s14;
+		line-height: 1.2;
+		color: #333;
+	}
+}

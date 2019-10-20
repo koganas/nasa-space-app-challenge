@@ -1,0 +1,64 @@
+.comp {
+	&-container {
+		position: relative;
+		height: 600px;
+		width: 300px;
+		margin: 150px auto;
+		svg {
+			width: 300px;
+			height: auto;
+		}
+	}
+
+	&-img {
+		position: absolute;
+		width: auto;
+		height: auto;
+		overflow:hidden;
+		background-color: #1b1b1b;
+	}
+
+	&-img svg {
+		display:block;
+		vertical-align:middle;
+		fill: #fff;
+	}
+
+	&-slider {
+		position: absolute;
+		z-index:9;
+		cursor: ew-resize;
+		/*set the appearance of the slider:*/
+		/* border-radius: 50%;*/
+		width: 1px;
+		height: 100%;
+		opacity: 0.7;
+		border-left: 3px #3c84ba solid;
+	}
+
+	&-slider:before{
+		content: '';
+		position: relative;
+		bottom: 11px;
+		right: 18px;
+		display: block;
+		border-bottom: 1px solid #3c84ba;
+		border-right: 1px solid #3c84ba;
+		width: 10px;
+		height: 10px;
+		transform: rotate(134deg);
+	}
+
+	&-slider:after{
+		content:'';
+		position: relative;
+		left: 5px;
+		bottom: 0px;
+		display: block;
+		border-bottom: 1px solid #3c84ba;
+		border-right: 1px solid #3c84ba;
+		width: 10px;
+		height: 10px;
+		transform: rotate(-45deg);
+	}
+}

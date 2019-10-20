@@ -18,16 +18,14 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-		{% include "src/templates/header.html" %}
-
 		{% block content %}{% endblock %}
 
 		{% include "src/templates/effect.html" %}
 
-        <br /><br /><br />
-
         {% include "src/templates/poll.html" %}
 
+        {% include "src/templates/latin.html" %}
+        
         {% include "src/templates/footer.html" %}
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.

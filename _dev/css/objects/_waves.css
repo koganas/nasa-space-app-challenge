@@ -78,16 +78,16 @@
 				animation-delay: 9s;
 			}
 			&:nth-child(6) {
-				animation-delay: 12s;
 				animation: float-low 12s cubic-bezier(.55,.5,.45,.5) infinite;
+				animation-delay: 12s;
 			}
 			&:nth-child(7) {
-				animation-delay: 14s;
 				animation: float-low 12s cubic-bezier(.55,.5,.45,.5) infinite;
+				animation-delay: 14s;
 			}
 			&:nth-child(8) {
-				animation-delay: 16s;
 				animation: float-low 12s cubic-bezier(.55,.5,.45,.5) infinite;
+				animation-delay: 16s;
 			}
 			&:nth-child(9) {
 				animation-delay: 18s;
@@ -98,9 +98,11 @@
 				z-index: 10;
 			}
 		}
+		svg, img {
+			pointer-events: none;
+		}
 		svg {
 			max-width: 50px;
-			pointer-events: none;
 		}
 	}
 

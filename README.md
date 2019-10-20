@@ -10,3 +10,6 @@ https://aguanoumbigo.co
 - Nunjucks
 - PostCSS
 - CSS3 animations
+
+## Assets
+- Flat icon: https://www.flaticon.com/

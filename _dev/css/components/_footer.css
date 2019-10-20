@@ -1,11 +1,14 @@
 footer {
 	&.container {
 		margin-bottom: 80px;
+		@media(--md) {
+			padding: 0 15px;
+		}
 	}
 	.capi {
 		img {
-			width: 200px;
-			height: auto;
+			width: 140px;
+			max-height: 203px;
 			margin: 40px auto 20px;
 		}
 	}

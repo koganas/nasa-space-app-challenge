@@ -1,4 +1,4 @@
-.hide {
-    opacity: 0;
-    visibility: hidden;
+body {
+	background: #1b1b1b;
+	margin: 0;
 }

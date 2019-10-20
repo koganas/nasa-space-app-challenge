@@ -12,12 +12,13 @@
 @import 'generic/_reset.css';
 @import 'generic/_misc.css';
 @import 'generic/_grid.css';
+@import 'generic/_typography.css';
 
 /* COMPONENTS
 **
 */
-/*@import 'components/_header.css';
-@import 'components/_footer.css';*/
+@import 'components/_header.css';
+@import 'components/_footer.css';
 
 /* OBJECTS - Generic */
 @import 'objects/_poll.css';

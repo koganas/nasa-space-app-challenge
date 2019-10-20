@@ -1,116 +1,28 @@
-.header {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 11;
-	background-color: $blackLight;
-	transition: max-height $animTime $cubic;
-	max-height: 80px;
-	display: flex;
-
-	.nav {
-		&__container {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			max-width: $maxWidth;
+header {
+	&.container {
+		cursor: pointer;
+		opacity: 1;
+		transition: all ease 0.2s;
+		&.hide {
+			opacity: 0;
+			height: 0;
+		}
+		h1 {
+			font-size: $s50;
+		}
+		h1, p {
+			color: #333;
 			width: 100%;
-			margin: 0 auto;
-			padding: 0 $spacement;
 		}
 
-		&__logo {
-			height: 100%;
-			width: 100%;
-			position: relative;
-			max-width: 176px;
-			@media (--md) {
-				max-width: 100px;
-			}
-
-			img, svg {
-				width: 100%;
-				max-height: 50px;
-				min-width: 112px;
-			}
-			
-			&_lg, &_sm {
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				opacity: 1;
-				transition: opacity $animTime $cubic, visibility $animTime $cubic;
-				display: flex;
-				align-items: center;
-				&.hide {
-					opacity: 0;
-					visibility: hidden;
-				}
-			}
-			&_lg {
-				img, svg {
-					min-height: 50px;
-				}
-			}
-			&_sm {
-				img, svg {
-					max-height: 36px;
-					min-width: 100px;
-					width: auto;
-				}
-			}
-		}
-
-		&__source {
-			font-family: $titlingCondensed;
-			font-size: $s08;
-			font-range: $fontRange;
-			color: $greyIce;
-			min-width: 78px;
-			svg {
-				width: 66px;
-				height: 14px;
-				vertical-align: middle;
-				margin-left: 2px;
-			}
-			svg path {
-				fill: $greyIce;
-			}
-		}
-		
-		@import './_menu.css';
-
-		&__source {
-			margin-right: 1rem;
-		}
-
-		&__btn {
-			button {
-				vertical-align: middle;
-			}
-		}
-	}
-	@media (--md){
-		max-height: 58px;
-		.nav {
-			&__logo {
-				&_lg { opacity: 0; visibility: hidden; }
-				&_sm.hide { opacity: 1; visibility: visible; }
-			}
-		}
-	}
-
-	.btn {
-		&__search {
-			margin-left: 1.4rem;
-			&:hover {
-				background-color: transparent;
-			}
+		&:after {
+			content: '\2193';
+			display: block;
+			font-family: $nunito;
+			color: #333;
+			font-size: 24px;
+			margin: 10px auto;
 		}
 
 	}
-
 }

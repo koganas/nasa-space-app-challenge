@@ -6,10 +6,26 @@ footer {
 		}
 	}
 	.capi {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-content: center;
+		margin-top: 20px;
+		p {
+			text-align: center;
+		}
 		img {
 			width: 140px;
 			max-height: 203px;
 			margin: 40px auto 20px;
+		}
+		a {
+			color: #3c84ba;
+			transition: color ease .2s;
+			&:hover {
+				color: #ffffff;
+				text-decoration: underline;
+			}
 		}
 	}
 }
